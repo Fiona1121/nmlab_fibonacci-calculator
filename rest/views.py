@@ -6,7 +6,7 @@ import json
 
 import os.path as osp
 import sys
-BUILD_DIR = osp.join(osp.dirname(osp.abspath(__file__)), "build/service/")
+BUILD_DIR = osp.join(osp.dirname(osp.abspath(__file__)), "../build/service/")
 sys.path.insert(0, BUILD_DIR)
 
 import grpc

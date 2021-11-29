@@ -60,7 +60,7 @@ if __name__ == "__main__":
     try:
         server.add_insecure_port(f"{args['ip']}:{args['port']}")
         server.start()
-        print(f"Run gRPC Server at {args['ip']}:{args['port']}")
+        print(f"Run Logging Server at {args['ip']}:{args['port']}")
         subscriber.run()
         server.wait_for_termination()
     except KeyboardInterrupt:
