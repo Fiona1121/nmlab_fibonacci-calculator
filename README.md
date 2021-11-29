@@ -55,3 +55,8 @@ $ http --json http://localhost:8000/rest/tutorial
 ```
 ## How the system work
 <img width="779" alt="截圖 2021-11-29 下午2 42 50" src="https://user-images.githubusercontent.com/55495526/143820529-18251819-b284-4d65-9782-4d0b26d3ef2c.png">
+
+
+https://user-images.githubusercontent.com/55495526/143828189-6c078c6b-4c8c-4745-99ee-a02e3c317287.mp4
+
+
