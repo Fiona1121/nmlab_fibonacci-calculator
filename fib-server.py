@@ -18,11 +18,12 @@ class FibCalculatorServicer(fib_pb2_grpc.FibCalculatorServicer):
 
     def Compute(self, request, context):
         n = request.order
+        print("Receive compute request:", n)
         value = self._fibonacci(n)
 
         response = fib_pb2.FibResponse()
         response.value = value
-
+        print("Send compute result as response:", value)
         return response
 
     def _fibonacci(self, n):

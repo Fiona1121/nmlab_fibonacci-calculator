@@ -21,9 +21,11 @@ class LogServiceServicer(log_pb2_grpc.LogServiceServicer):
         pass
 
     def Log(self, request, context):
+        print("Receive log request")
         response = log_pb2.LogResponse()
         for h in history:
             response.value.append(h)
+        print("Send history as response:", history)
         return response
 
 class Subscriber():
@@ -43,6 +45,7 @@ class Subscriber():
             pass
     
     def on_message(self, client, obj, msg):
+        print("RECV:", int(msg.payload))
         history.append(int(msg.payload))
 
 

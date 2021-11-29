@@ -45,6 +45,7 @@ class FibView(APIView):
         try:
             req_order = json.loads(request.body)['order']
             client.publish(topic='log', payload=req_order)
+            print("PUBLISH [log]:", req_order)
         except KeyError:
             return Response(data={ 'msg': 'ERROR: incorrect POST body' }, status=422)
         
